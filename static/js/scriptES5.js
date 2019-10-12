@@ -217,7 +217,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     url: 'http://demo.sibers.com/users',
     success: function success(data) {
       // Local Storage Check data
-      if (!ls.getItem('contactsData')) {
+      if (ls.getItem('contactsData') === null) {
         (function () {
           var contactsData = [];
 
@@ -247,4 +247,5 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
   });
+
 })(window);

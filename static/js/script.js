@@ -225,7 +225,7 @@
     url: 'http://demo.sibers.com/users',
     success: (data) => {
       // Local Storage Check data
-      if (!ls.getItem('contactsData')) {
+      if (ls.getItem('contactsData') === null) {
         const contactsData = [];
 
         // Create structure data
@@ -254,5 +254,6 @@
       }
     }
   })
+
 
 })(window);
